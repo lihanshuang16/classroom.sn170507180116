@@ -94,7 +94,7 @@ public class Ch4Activity1 extends AppCompatActivity implements View.OnFocusChang
     }
               public void startMain(View view){
                   //界面跳转
-                  Intent intent=new Intent(this,MainActivity.class);
+                  Intent intent=new Intent(this,Ch4Activity2.class);
                   startActivity(intent);
               }
           }
