@@ -11,19 +11,19 @@ import android.widget.ProgressBar;
 import java.util.ArrayList;
 
 public class Ch9Activity1 extends AppCompatActivity {
-private ProgressBar progressBar;
+    private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_ch9_1);
         Resources resources=getResources();
         String[] countries=resources.getStringArray(R.array.countries);
-    ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,countries);
-    AutoCompleteTextView autoCompleteTextView=(AutoCompleteTextView)findViewById(R.id.ch9_1_act);
+        ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,countries);
+        AutoCompleteTextView autoCompleteTextView=(AutoCompleteTextView)findViewById(R.id.ch9_1_act);
         autoCompleteTextView.setAdapter(arrayAdapter);
         progressBar=(ProgressBar)findViewById(R.id.ch9_1_pb);
-}
-public void progressStart(View view){
+    }
+    public void progressStart(View view){
         Thread thread=new Thread(){
             @Override
             public void run() {
